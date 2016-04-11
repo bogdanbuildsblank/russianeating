@@ -1,0 +1,1430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Booklet - jQuery Plugin</title>
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link href="booklet/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+    <style type="text/css">
+        body {
+            margin: 0;
+            height: 100vh;
+            min-height: 100%;
+            background-color: #F5DDC3;
+        }
+
+        .b-wrap{
+            height: 100% !important;
+        }
+        .booklet .b-wrap-left  {background:#F5DDC3;}
+	    .booklet .b-wrap-right {background:#F5DDC3;}
+
+        .booklet {
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 600px;
+            max-height: 100%;
+            height: 100% !important;
+        }
+
+        .book-page {
+            /*min-height: 710px;*/
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            border: none;
+        }
+
+        .left {
+            min-width: 200%;
+            -webkit-clip-path: inset(0 50% 0 0);
+            clip-path: inset(0 50% 0 0);
+            border: none;
+        }
+
+        .right {
+            min-width: 200%;
+            right: 100%;
+            position: relative;
+            -webkit-clip-path: inset(0 0 0 50%);
+            clip-path: inset(0 0 0 50%);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="mybook">
+            <!-- FRONT of book -->
+            <img class="book-page" src="cookbook/pages-1.jpg" alt="cookbook page set" />
+
+
+            <!-- TODO: replace w/angular templates -->
+            <img class="book-page left" src="cookbook/pages-2.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-2.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-3.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-3.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-4.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-4.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-5.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-5.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-6.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-6.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-7.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-7.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-8.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-8.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-9.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-9.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-10.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-10.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-11.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-11.jpg" alt="cookbook page set" />
+
+            <!-- 10 -->
+
+            <img class="book-page left" src="cookbook/pages-12.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-12.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-13.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-13.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-14.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-14.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-15.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-15.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-16.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-16.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-17.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-17.jpg" alt="cookbook page set" />
+
+            <img class="book-page left" src="cookbook/pages-18.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-18.jpg" alt="cookbook page set" />
+
+
+
+            <img class="book-page left" src="cookbook/pages-19.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-19.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-20.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-20.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-21.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-21.jpg" alt="cookbook page set" />
+
+            <!-- 20 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-22.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-22.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-23.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-23.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-24.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-24.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-25.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-25.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-26.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-26.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-27.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-27.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-28.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-28.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-29.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-29.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-30.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-30.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-31.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-31.jpg" alt="cookbook page set" />
+
+            <!-- 30 -->
+
+
+            <img class="book-page left" src="cookbook/pages-32.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-32.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-33.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-33.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-34.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-34.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-35.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-35.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-36.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-36.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-37.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-37.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-38.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-38.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-39.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-39.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-40.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-40.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-41.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-41.jpg" alt="cookbook page set" />
+
+
+            <!-- 40 -->
+
+
+            <img class="book-page left" src="cookbook/pages-42.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-42.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-43.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-43.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-44.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-44.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-45.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-45.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-46.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-46.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-47.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-47.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-48.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-48.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-49.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-49.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-50.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-50.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-51.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-51.jpg" alt="cookbook page set" />
+
+
+            <!--50-->
+
+
+            <img class="book-page left" src="cookbook/pages-52.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-52.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-53.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-53.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-54.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-54.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-55.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-55.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-56.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-56.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-57.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-57.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-58.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-58.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-59.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-59.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-60.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-60.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-61.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-61.jpg" alt="cookbook page set" />
+
+
+
+            <!--
+
+
+
+            -->
+
+
+            <img class="book-page left" src="cookbook/pages-62.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-62.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-63.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-63.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-64.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-64.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-65.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-65.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-66.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-66.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-67.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-67.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-68.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-68.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-69.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-69.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-70.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-70.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-71.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-71.jpg" alt="cookbook page set" />
+
+            <!-- 70 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-72.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-72.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-73.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-73.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-74.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-74.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-75.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-75.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-76.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-76.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-77.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-77.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-78.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-78.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-79.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-79.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-80.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-80.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-81.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-81.jpg" alt="cookbook page set" />
+
+            <!-- 80 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-82.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-82.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-83.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-83.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-84.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-84.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-85.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-85.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-86.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-86.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-87.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-87.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-88.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-88.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-89.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-89.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-90.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-90.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-91.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-91.jpg" alt="cookbook page set" />
+
+            <!-- 90 -->
+
+
+            <img class="book-page left" src="cookbook/pages-92.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-92.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-93.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-93.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-94.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-94.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-95.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-95.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-96.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-96.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-97.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-97.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-98.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-98.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-99.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-99.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-100.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-100.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-101.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-101.jpg" alt="cookbook page set" />
+
+            <!-- 100 -->
+
+
+            <img class="book-page left" src="cookbook/pages-102.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-102.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-103.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-103.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-104.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-104.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-105.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-105.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-106.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-106.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-107.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-107.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-108.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-108.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-109.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-109.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-110.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-110.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-111.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-111.jpg" alt="cookbook page set" />
+
+            <!--110-->
+
+
+            <img class="book-page left" src="cookbook/pages-112.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-112.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-113.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-113.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-114.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-114.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-115.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-115.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-116.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-116.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-117.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-117.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-118.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-118.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-119.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-119.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-120.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-120.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-121.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-121.jpg" alt="cookbook page set" />
+
+
+            <!-- 120 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-122.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-122.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-123.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-123.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-124.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-124.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-125.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-125.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-126.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-126.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-127.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-127.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-128.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-128.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-129.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-129.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-130.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-130.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-131.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-131.jpg" alt="cookbook page set" />
+
+            <!--130 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-132.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-132.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-133.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-133.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-134.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-134.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-135.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-135.jpg" alt="cookbook page set" />
+
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-136.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-136.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-137.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-137.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-138.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-138.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-139.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-139.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-140.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-140.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-141.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-141.jpg" alt="cookbook page set" />
+
+            <!-- 140 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-142.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-142.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-143.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-143.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-144.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-144.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-145.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-145.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-146.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-146.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-147.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-147.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-148.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-148.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-149.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-149.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-150.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-150.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-151.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-151.jpg" alt="cookbook page set" />
+
+            <!-- 150 -->
+
+
+            <img class="book-page left" src="cookbook/pages-152.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-152.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-153.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-153.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-154.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-154.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-155.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-155.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-156.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-156.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-157.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-157.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-158.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-158.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-159.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-159.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-160.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-160.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-161.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-161.jpg" alt="cookbook page set" />
+
+            <!-- 160 -->
+
+
+            <img class="book-page left" src="cookbook/pages-162.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-162.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-163.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-163.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-164.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-164.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-165.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-165.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-166.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-166.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-167.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-167.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-168.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-168.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-169.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-169.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-170.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-170.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-171.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-171.jpg" alt="cookbook page set" />
+
+            <!--170-->
+
+
+            <img class="book-page left" src="cookbook/pages-172.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-172.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-173.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-173.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-174.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-174.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-175.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-175.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-176.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-176.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-177.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-177.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-178.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-178.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-179.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-179.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-180.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-180.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-181.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-181.jpg" alt="cookbook page set" />
+
+
+            <!-- 180 -->
+
+
+            <img class="book-page left" src="cookbook/pages-182.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-182.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-183.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-183.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-184.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-184.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-185.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-185.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-186.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-186.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-187.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-187.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-188.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-188.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-189.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-189.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-190.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-190.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-191.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-191.jpg" alt="cookbook page set" />
+
+            <!-- 190 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-92.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-92.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-193.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-193.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-194.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-194.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-195.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-195.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-196.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-196.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-197.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-197.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-198.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-198.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-199.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-199.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-200.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-200.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-201.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-201.jpg" alt="cookbook page set" />
+
+            <!-- 200 -->
+
+
+
+            <img class="book-page left" src="cookbook/pages-202.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-202.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-203.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-203.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-204.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-204.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-205.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-205.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-206.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-206.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-207.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-207.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-208.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-208.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-209.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-209.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-210.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-210.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-211.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-211.jpg" alt="cookbook page set" />
+
+            <!-- 210 -->
+
+
+            <img class="book-page left" src="cookbook/pages-212.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-212.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-213.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-213.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-214.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-214.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-215.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-215.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-216.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-216.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-217.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-217.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-218.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-218.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-219.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-219.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-220.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-220.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-221.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-221.jpg" alt="cookbook page set" />
+
+            <!-- 220 -->
+
+
+            <img class="book-page left" src="cookbook/pages-222.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-222.jpg" alt="cookbook page set" />
+
+
+
+
+            <img class="book-page left" src="cookbook/pages-223.jpg" alt="cookbook page set" />
+            <img class="book-page right" src="cookbook/pages-223.jpg" alt="cookbook page set" />
+
+
+            <!-- BACK of book -->
+            <img class="book-page" src="cookbook/pages-224.jpg" alt="cookbook page set" />
+
+        </div>
+    </section>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script> window.jQuery || document.write('<script src="booklet/jquery-2.1.0.min.js"><\/script>') </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script> window.jQuery.ui || document.write('<script src="booklet/jquery-ui-1.10.4.min.js"><\/script>') </script>
+    <script src="booklet/jquery.easing.1.3.js"></script>
+    <script src="booklet/jquery.booklet.latest.js"></script>
+    <script>
+        $(function () {
+            $("#mybook").booklet(
+			{
+			    width: "100%",
+			    height: "100%",
+			    pagePadding: 0,
+
+			    closed: true,
+			    covers: true,
+			    autoCenter: true,
+
+			    pageNumbers: false,
+			    hash: true
+			}
+			);
+        });
+    </script>
+</body>
+</html>
